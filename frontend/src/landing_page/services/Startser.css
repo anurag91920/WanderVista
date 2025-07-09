@@ -1,0 +1,60 @@
+.adventure-container {
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.heading h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background-color: #e63946;
+    margin: 1rem auto;
+    border-radius: 4px;
+}
+
+.heading p {
+    max-width: 700px;
+    margin: auto;
+    color: #555;
+    font-size: 1rem;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card h3 {
+    margin: 1rem 0 0.5rem;
+    font-weight: 600;
+}
+
+.card p {
+    color: #555;
+    padding: 0 1rem 1rem;
+}

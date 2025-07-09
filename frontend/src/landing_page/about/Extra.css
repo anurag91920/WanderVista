@@ -1,0 +1,55 @@
+.experience-values-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    flex-wrap: wrap;
+}
+
+.experience-column,
+.values-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 40px;
+    height: 3px;
+    background-color: #f04e30;
+    margin-bottom: 20px;
+}
+
+.experience-column p {
+    font-size: 1rem;
+    color: #545151;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.core-values-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.core-values-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.dash {
+    color: #f04e30;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}

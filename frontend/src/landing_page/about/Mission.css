@@ -1,0 +1,31 @@
+.mission-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+.mission-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background-color: #f04e30;
+    margin-bottom: 20px;
+}
+
+.mission-img {
+    flex: 1;
+    text-align: center;
+}
+
+.mission-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}

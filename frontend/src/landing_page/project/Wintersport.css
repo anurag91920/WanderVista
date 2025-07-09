@@ -1,0 +1,37 @@
+.adventure-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.adventure-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.adventure-gallery img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.dots {
+    margin-top: 1rem;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333;
+}

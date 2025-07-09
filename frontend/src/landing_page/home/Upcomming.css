@@ -1,0 +1,70 @@
+.tours-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 100px;
+    background-color: #f8f8f8;
+    flex-wrap: wrap;
+}
+
+.tours-text {
+    flex: 1;
+    max-width: 40%;
+    margin-right: 50px;
+}
+
+.tours-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 50px;
+    height: 3px;
+    background-color: #ff2d55;
+    margin-bottom: 20px;
+}
+
+.tours-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.btn-learn {
+    background-color: #ff2d55;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-learn:hover {
+    background-color: #e60039;
+}
+
+.tours-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-row {
+    display: flex;
+    gap: 20px;
+}
+
+.image-row img {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
