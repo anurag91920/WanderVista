@@ -7,7 +7,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/auth/login`, data);
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_UR}/api/auth/login`, data);
 
       if (res.data.token) {
         alert("Login Success");
