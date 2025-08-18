@@ -48,6 +48,24 @@
   filter: invert(1);
 }
 
+.user-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.user-icon:hover {
+  transform: scale(1.1);
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6px;
+}
+
 /* Mobile Responsive */
 @media (max-width: 767px) {
   .nav-text {

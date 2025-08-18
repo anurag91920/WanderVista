@@ -27,11 +27,15 @@ function Navbar() {
                         <li className="nav-item">
                             <Link className="nav-link nav-text" to="/contact">Contact</Link>
                         </li>
+                         {/* User Icon instead of Login/Signup */}
                         <li className="nav-item">
-                            <Link className="nav-link nav-text" to="/login">Login</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link nav-text" to="/signup">Signup</Link>
+                            <Link className="nav-link nav-icon" to="/login">
+                                <img
+                                    src="/media/icons/user-icon.png" // Replace with your icon path
+                                    alt="User"
+                                    className="user-icon"
+                                />
+                            </Link>
                         </li>
                     </ul>
                 </div>

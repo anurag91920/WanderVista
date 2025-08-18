@@ -1,15 +1,19 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Signup() {
   const [data, setData] = useState({ name: "", email: "", password: "" });
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${process.env.REACT_APP_BACKEND_UR}/api/auth/signup`,data);
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/auth/signup`, data);
 
       alert(res.data.status || "Signup complete");
+      // Optionally redirect to login after signup
+      // navigate("/login");
     } catch (error) {
       console.error(error);
       alert("Signup failed. Try again.");
@@ -17,22 +21,29 @@ function Signup() {
   };
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-      <form 
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh"
+      }}
+    >
+      <form
         style={{
           padding: "20px",
           border: "1px solid #ccc",
           borderRadius: "8px",
           boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
           minWidth: "300px"
-        }} 
+        }}
         onSubmit={handleSubmit}
       >
         <h3 style={{ textAlign: "center", marginBottom: "20px" }}>Sign Up</h3>
 
         <div style={{ marginBottom: "15px" }}>
           <label htmlFor="name">Full Name</label>
-          <input 
+          <input
             type="text"
             id="name"
             placeholder="Enter name"
@@ -45,7 +56,7 @@ function Signup() {
 
         <div style={{ marginBottom: "15px" }}>
           <label htmlFor="email">Email address</label>
-          <input 
+          <input
             type="email"
             id="email"
             placeholder="Enter email"
@@ -58,7 +69,7 @@ function Signup() {
 
         <div style={{ marginBottom: "20px" }}>
           <label htmlFor="password">Password</label>
-          <input 
+          <input
             type="password"
             id="password"
             placeholder="Password"
@@ -70,16 +81,38 @@ function Signup() {
         </div>
 
         <div style={{ textAlign: "center" }}>
-          <button type="submit" style={{
-            backgroundColor: "green",
-            color: "white",
-            padding: "10px 20px",
-            border: "none",
-            borderRadius: "4px",
-            cursor: "pointer"
-          }}>
+          <button
+            type="submit"
+            style={{
+              backgroundColor: "green",
+              color: "white",
+              padding: "10px 20px",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer",
+              marginBottom: "10px"
+            }}
+          >
             Sign Up
           </button>
+
+          {/* Login Button below */}
+          <div>
+            <button
+              type="button"
+              onClick={() => navigate("/login")}
+              style={{
+                backgroundColor: "transparent",
+                color: "blue",
+                border: "none",
+                cursor: "pointer",
+                textDecoration: "underline",
+                fontSize: "14px"
+              }}
+            >
+              Already have an account? Login
+            </button>
+          </div>
         </div>
       </form>
     </div>

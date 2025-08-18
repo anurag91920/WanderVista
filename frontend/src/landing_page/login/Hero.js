@@ -1,17 +1,20 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Login() {
   const [data, setData] = useState({ email: "", password: "" });
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${process.env.REACT_APP_BACKEND_UR}/api/auth/login`, data);
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/auth/login`, data);
 
       if (res.data.token) {
         alert("Login Success");
         localStorage.setItem("token", res.data.token);
+        // navigate to dashboard or homepage if needed
       } else {
         alert(res.data.error || "Login failed");
       }
@@ -53,7 +56,16 @@ function Login() {
         </div>
 
         <div className="d-grid text-center">
-          <button type="submit" className="btn btn-primary btn-square mx-auto">Login</button>
+          <button type="submit" className="btn btn-primary mb-2">Login</button>
+
+          {/* Signup Button Below */}
+          <button
+            type="button"
+            className="btn btn-outline-secondary"
+            onClick={() => navigate('/signup')}
+          >
+            Don't have an account? Sign up
+          </button>
         </div>
       </form>
     </div>
